@@ -15,6 +15,19 @@ shinyUI(fluidPage(
   # Sidebar with a slider input for number of bins
   sidebarLayout(
     sidebarPanel(
+      
+      withTags({
+        div(class="header", checked=NA,
+            
+            p("Use Machine Learning to predict which passengers survived the tragedy."),
+            
+            p("Choose your algorithm and adjust in order to see the Importance on each features"),
+            
+            a(href="https://github.com/voltek62/titanicShiny/", "Source Code on GitHub"),
+            
+            p("")
+      )}),
+        
 
       selectInput("algo", "Machine Learning:",
                   c("Random Forest" = "rf",
